@@ -3,10 +3,15 @@ var app = express();
 
 console.log("Hello World");
 
-app.get('/',function(req,res){
+/*app.get('/',function(req,res){
     res.send("Hello Express")
-});
+});*/
 
+var absolutePath = __dirname + /views/index.html
+
+app.get('/',function(req,res){
+    res.sendFile(absolutePath);
+})
 
 
 
