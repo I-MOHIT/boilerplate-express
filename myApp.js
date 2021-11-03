@@ -18,7 +18,8 @@ var absolutePath2 = __dirname + /public
 app.use('/public',express.static());
 
 app.get('/json',function(req,res){
-    res.json({"message":"Hello json"})
+    res.json({
+        "message":"Hello json"})
 })
 
 
