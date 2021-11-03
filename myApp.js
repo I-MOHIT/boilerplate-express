@@ -7,7 +7,7 @@ console.log("Hello World");
     res.send("Hello Express")
 });*/
 
-var absolutePath = __dirname + /views/index.html
+var absolutePath = __dirname + "/views/index.html"
 
 app.get('/',function(req,res){
     res.sendFile(absolutePath);
@@ -17,7 +17,9 @@ var absolutePath2 = __dirname + /public
 
 app.use('/public',express.static());
 
-
+app.get('/json',function(req,res){
+    res.json({"message":"Hello json"})
+})
 
 
 
