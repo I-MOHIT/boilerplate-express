@@ -13,7 +13,9 @@ app.get('/',function(req,res){
     res.sendFile(absolutePath);
 })
 
+var absolutePath2 = __dirname + /public
 
+app.use('/public',express.static());
 
 
 
